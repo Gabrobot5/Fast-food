@@ -1,0 +1,226 @@
+// ...existing code...
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger Express - Menu Virtual</title>
+  <link rel="stylesheet" href="styles/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo"><h1>Burger Express</h1></div>
+
+      <div class="nav-cart-wrapper">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#inicio" class="nav-link">Início</a></li>
+            <li><a href="#menu" class="nav-link">Menu</a></li>
+            <li><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </div>
+      </div>
+
+      <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="inicio" class="hero">
+      <div class="container">
+        <h2>Os Melhores Hambúrgueres da Cidade!</h2>
+        <p>Experimente nosso menu exclusivo com ingredientes frescos e sabor inigualável</p>
+        <a href="#menu" class="btn">Ver Menu</a>
+      </div>
+    </section>
+
+    <section id="menu" class="menu">
+      <div class="container">
+        <h2 class="section-title">Nosso Menu</h2>
+
+        <div class="menu-categories">
+          <button class="category-btn active" data-category="hamburgers">Hambúrgueres</button>
+          <button class="category-btn" data-category="bebidas">Bebidas</button>
+          <button class="category-btn" data-category="acompanhamentos">Acompanhamentos</button>
+          <button class="category-btn" data-category="sobremesas">Sobremesas</button>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-category active" id="hamburgers">
+            <div class="product-card">
+              <img src="images/burguer-classic.jpg" alt="Burger Classic"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Imagem+indispon%C3%ADvel'">
+              <div class="product-info">
+                <h3>Burger Classic</h3>
+                <p>Pão, carne, queijo, alface e tomate</p>
+                <span class="price">R$ 18,90</span>
+                <button class="add-to-cart">Adicionar</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="images/burguer-bacon.jpg" alt="Burger Bacon"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Imagem+indispon%C3%ADvel'">
+              <div class="product-info">
+                <h3>Burger Bacon</h3>
+                <p>Carne, queijo, bacon crocante e molho especial</p>
+                <span class="price">R$ 22,90</span>
+                <button class="add-to-cart">Adicionar</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="images/cheese-duplo.jpg" alt="Double Cheese"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Imagem+indispon%C3%ADvel'">
+              <div class="product-info">
+                <h3>Double Cheese</h3>
+                <p>Duas carnes, duplo queijo e cebola caramelizada</p>
+                <span class="price">R$ 26,90</span>
+                <button class="add-to-cart">Adicionar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-category" id="bebidas">
+            <div class="product-card">
+              <img src="images/refri.jpg" alt="Refrigerante"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Imagem+indispon%C3%ADvel'">
+              <div class="product-info">
+                <h3>Refrigerante</h3>
+                <p>Coca-Cola, Guaraná ou Fanta 500ml</p>
+                <span class="price">R$ 8,90</span>
+                <button class="add-to-cart">Adicionar</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="images/suco.jpg" alt="Suco Natural"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Imagem+indispon%C3%ADvel'">
+              <div class="product-info">
+                <h3>Suco Natural</h3>
+                <p>Laranja, Limão ou Maracujá 400ml</p>
+                <span class="price">R$ 12,90</span>
+                <button class="add-to-cart">Adicionar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-category" id="acompanhamentos">
+            <div class="product-card">
+              <img src="images/batata-frita.jpg" alt="Batata Frita"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Imagem+indispon%C3%ADvel'">
+              <div class="product-info">
+                <h3>Batata Frita</h3>
+                <p>Porção individual com ketchup</p>
+                <span class="price">R$ 12,90</span>
+                <button class="add-to-cart">Adicionar</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="images/onion-rings.jpg" alt="Onion Rings"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Imagem+indispon%C3%ADvel'">
+              <div class="product-info">
+                <h3>Onion Rings</h3>
+                <p>Anéis de cebola empanados</p>
+                <span class="price">R$ 15,90</span>
+                <button class="add-to-cart">Adicionar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-category" id="sobremesas">
+            <div class="product-card">
+              <img src="images/milkshake.jpg" alt="Milk Shake"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Imagem+indispon%C3%ADvel'">
+              <div class="product-info">
+                <h3>Milk Shake</h3>
+                <p>Chocolate, Morango ou Baunilha 400ml</p>
+                <span class="price">R$ 16,90</span>
+                <button class="add-to-cart">Adicionar</button>
+              </div>
+            </div>
+            <div class="product-card">
+              <img src="images/brownie.jpg" alt="Brownie"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Imagem+indispon%C3%ADvel'">
+              <div class="product-info">
+                <h3>Brownie</h3>
+                <p>Com sorvete e calda de chocolate</p>
+                <span class="price">R$ 14,90</span>
+                <button class="add-to-cart">Adicionar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about">
+      <div class="container">
+        <h2 class="section-title">Sobre Nós</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Há mais de 10 anos servindo os melhores hambúrgueres da região...</p>
+            <p>Utilizamos apenas carne 100% bovina...</p>
+          </div>
+          <div class="about-info">
+            <div class="info-item">
+              <h3>Horário de Funcionamento</h3>
+              <p>Segunda a Sábado: 11h às 23h</p>
+              <p>Domingo: 12h às 22h</p>
+            </div>
+            <div class="info-item">
+              <h3>Delivery</h3>
+              <p>Entregamos em toda a região</p>
+              <p>Taxa: R$ 5,00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contato">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Burger Express</h3>
+          <p>O melhor fast food da cidade!</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p>(11) 9999-9999</p>
+          <p>contato@burgerexpress.com</p>
+          <p>Rua das Hamburguerias, 123 - Centro</p>
+        </div>
+        <div class="footer-section">
+          <h3>Redes Sociais</h3>
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Burger Express. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- script principal -->
+  <script src="script/script.js"></script>
+</body>
+</html>
