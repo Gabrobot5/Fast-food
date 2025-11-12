@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - Burger Express</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/all.css">
+  <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+  <main class="login-page" role="main">
+    <div class="background" aria-hidden="true">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+
+    <form class="login-form" action="#" method="post" novalidate aria-labelledby="login-title">
+      <h1 id="login-title">Login</h1>
+
+      <label for="username">Usuário</label>
+      <input id="username" name="username" type="text" placeholder="Email ou Telefone" autocomplete="username" required>
+
+      <label for="password">Senha</label>
+      <input id="password" name="password" type="password" placeholder="Senha" autocomplete="current-password" required>
+
+      <button type="submit">Entrar</button>
+
+      <div class="social" aria-label="login social">
+        <button type="button" class="go" aria-label="Entrar com Google"><i class="fab fa-google" aria-hidden="true"></i> Google</button>
+        <button type="button" class="fb" aria-label="Entrar com Facebook"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</button>
+      </div>
+    </form>
+    </main>
+
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form>
+        <h3>Login</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username">
+
+        <label for="password">Senha</label>
+        <input type="password" placeholder="Password" id="password">
+
+        <button>Log In</button>
+        <div class="social">
+            <div class="go"><i class="fab fa-google"></i> Google</div>
+            <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+            <a href="index.html" class="fb" aria-label="Voltar para a página inicial"><i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar</a>
+        </div>
+    </form>
+</body>
+
+</html>
