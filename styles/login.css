@@ -1,4 +1,4 @@
-/* styles/login.css - versão revisada: limpa, responsiva e acessível */
+/* styles/login.css - versão corrigida */
 *,
 *::before,
 *::after {
@@ -22,11 +22,18 @@
 
 html, body {
   height: 100%;
-  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--bg);
   color: var(--text);
+}
+
+/* FUNDO COM IMAGEM - TROQUE AQUI SUA IMAGEM */
+body {
+  background: 
+    linear-gradient(rgba(8, 7, 16, 0.7), rgba(8, 7, 16, 0.7)),
+    url('../images/restaurante-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* Container central */
@@ -125,6 +132,7 @@ html, body {
 /* Botões sociais */
 .social {
   display: flex;
+  flex-direction: column;
   gap: 12px;
   justify-content: center;
   margin-top: 18px;
@@ -133,216 +141,51 @@ html, body {
 .social button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 8px 12px;
+  padding: 12px;
   border-radius: 8px;
   background: rgba(255,255,255,0.12);
   color: var(--text);
   border: 1px solid transparent;
   cursor: pointer;
   font-weight: 600;
+  transition: background-color 150ms ease;
+  width: 100%;
+}
+
+.social button:hover {
+  background: rgba(255,255,255,0.18);
 }
 
 .social button:focus {
   outline: 3px solid rgba(255,213,79,0.16);
 }
 
-.social i {
-  font-size: 1rem;
-  opacity: 0.95;
-}
-
-/* Shapes decorativas (não interativas) */
-.background {
-  position: absolute;
-  left: 50%;
-  top: 16%;
-  transform: translateX(-50%);
-  width: 420px;
-  height: 220px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.background .shape {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  filter: blur(6px);
-  opacity: 0.9;
-}
-
-.background .shape:first-child {
-  background: linear-gradient(135deg, var(--accent-1), #23a2f6);
-  left: -50px;
-  top: 0;
-}
-
-.background .shape:last-child {
-  background: linear-gradient(90deg, var(--accent-2), #f09819);
-  right: -40px;
-  bottom: 0;
-}
-
-/* Responsividade */
-@media (max-width: 420px) {
-  .background { display: none; }
-  .login-form { padding: 22px 16px; }
-  :root { --max-width: 360px; }
-}
-
-/* Respeitar preferência de redução de movimento */
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; animation: none !important; }
-}
-```// filepath: d:\Users\ALUNO\Desktop\appclara\.git\Fast-food\styles\login.css
-/* styles/login.css - versão revisada: limpa, responsiva e acessível */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --bg: #080710;
-  --card-bg: rgba(255,255,255,0.13);
-  --accent-1: #1845ad;
-  --accent-2: #ff512f;
-  --text: #ffffff;
-  --focus: #ffd54f;
-  --muted: rgba(255,255,255,0.6);
-  --max-width: 420px;
-  --radius: 10px;
-  --gap: 14px;
-}
-
-html, body {
-  height: 100%;
-  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: var(--bg);
-  color: var(--text);
-}
-
-/* Container central */
-.login-page {
-  min-height: 100vh;
-  display: flex;
+/* Botão Voltar */
+.btn-voltar {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
-  position: relative;
-}
-
-/* Cartão do formulário */
-.login-form {
-  width: 100%;
-  max-width: var(--max-width);
-  background: var(--card-bg);
-  border-radius: calc(var(--radius) + 2px);
-  padding: 36px 24px;
-  position: relative;
-  box-shadow: 0 8px 36px rgba(0,0,0,0.5);
-  border: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(8px);
-  z-index: 1;
-}
-
-/* Título */
-.login-form h1 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: calc(var(--gap) + 4px);
-}
-
-/* Labels e inputs */
-.login-form label {
-  display: block;
-  margin-top: var(--gap);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.95);
-}
-
-.login-form input[type="text"],
-.login-form input[type="password"] {
-  width: 100%;
-  height: 48px;
-  margin-top: 8px;
-  padding: 0 12px;
+  gap: 8px;
+  padding: 12px;
   border-radius: 8px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.08);
   color: var(--text);
-  font-size: 0.98rem;
-  border: 1px solid transparent;
-  transition: box-shadow 180ms ease, border-color 180ms ease, transform 120ms ease;
+  border: 1px solid rgba(255,255,255,0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 150ms ease;
+  width: 100%;
+  text-align: center;
 }
 
-.login-form input::placeholder {
-  color: var(--muted);
-}
-
-/* Foco visível e acessível */
-.login-form input:focus,
-.login-form input:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(255,213,79,0.12);
-  border-color: var(--focus);
+.btn-voltar:hover {
+  background: rgba(255,255,255,0.15);
   transform: translateY(-1px);
 }
 
-/* Botão principal */
-.login-form button[type="submit"] {
-  display: block;
-  width: 100%;
-  margin-top: calc(var(--gap) + 6px);
-  height: 48px;
-  border-radius: 8px;
-  background: #ffffff;
-  color: var(--bg);
-  font-weight: 700;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: transform 150ms ease, box-shadow 150ms ease;
-}
-
-.login-form button[type="submit"]:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-.login-form button[type="submit"]:focus {
-  outline: 3px solid rgba(255,213,79,0.24);
-}
-
-/* Botões sociais */
-.social {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 18px;
-}
-
-.social button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.12);
-  color: var(--text);
-  border: 1px solid transparent;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.social button:focus {
+.btn-voltar:focus {
   outline: 3px solid rgba(255,213,79,0.16);
 }
 
@@ -386,12 +229,33 @@ html, body {
 
 /* Responsividade */
 @media (max-width: 420px) {
-  .background { display: none; }
-  .login-form { padding: 22px 16px; }
-  :root { --max-width: 360px; }
+  .background { 
+    display: none; 
+  }
+  
+  .login-form { 
+    padding: 22px 16px; 
+  }
+  
+  :root { 
+    --max-width: 360px; 
+  }
+  
+  .social {
+    gap: 10px;
+  }
 }
 
 /* Respeitar preferência de redução de movimento */
 @media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; animation: none !important; }
+  * { 
+    transition: none !important; 
+    animation: none !important; 
+  }
+  
+  .login-form button[type="submit"]:hover,
+  .login-form input:focus,
+  .btn-voltar:hover {
+    transform: none !important;
+  }
 }
