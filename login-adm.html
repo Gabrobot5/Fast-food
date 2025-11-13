@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel ADM - Burger Express</title>
+
+  <!-- Fonte Premium -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/login-adm.css">
+</head>
+<body>
+
+  <main class="login-adm" role="main">
+    <h1>Painel Administrativo</h1>
+    
+    <form action="#" method="post">
+      <div class="input-group">
+        <i class="fas fa-user-shield"></i>
+        <input type="text" id="admin-user" name="admin-user" placeholder="admin@burgerexpress.com" required>
+      </div>
+      
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="admin-password" name="admin-password" placeholder="••••••••" required>
+      </div>
+      
+      <button type="submit">
+        <span>Acessar Painel</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </form>
+
+    <div class="admin-notes">
+      <p><i class="fas fa-shield-alt"></i> Acesso exclusivo para administradores</p>
+      <a href="index.html" class="btn-voltar">
+        <i class="fas fa-arrow-left"></i> Voltar ao Site Principal
+      </a>
+    </div>
+  </main>
+
+</body>
+</html>

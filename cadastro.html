@@ -3,32 +3,42 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Login - Burger Express</title>
+  <title>Cadastro - Burger Express</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/all.css">
   <link rel="stylesheet" href="styles/login.css">
+  <link rel="stylesheet" href="styles/cadastro.css">
 </head>
 
 <body>
-  <main class="login-page" role="main">
-    <form class="login-form" action="#" method="post" novalidate aria-labelledby="login-title">
-      <h1 id="login-title">Login</h1>
+  <main class="signup-page" role="main">
+    <form class="signup-form" action="#" method="post" novalidate aria-labelledby="signup-title">
+      <h1 id="signup-title">Cadastro</h1>
 
-      <label for="username">Usuário</label>
-      <input id="username" name="username" type="text" placeholder="Email ou Telefone" autocomplete="username" required>
+      <label for="fullname">Nome Completo</label>
+      <input id="fullname" name="fullname" type="text" placeholder="Seu nome completo" autocomplete="name" required>
+
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" placeholder="seu@email.com" autocomplete="email" required>
+
+      <label for="phone">Telefone</label>
+      <input id="phone" name="phone" type="tel" placeholder="(61) 99999-9999" autocomplete="tel" required>
 
       <label for="password">Senha</label>
-      <input id="password" name="password" type="password" placeholder="Senha" autocomplete="current-password" required>
+      <input id="password" name="password" type="password" placeholder="Crie uma senha" autocomplete="new-password" required>
 
-      <button type="submit">Entrar</button>
+      <label for="confirm-password">Confirmar Senha</label>
+      <input id="confirm-password" name="confirm-password" type="password" placeholder="Digite a senha novamente" autocomplete="new-password" required>
 
-      <div class="social" aria-label="Opções de login">
-        <button type="button" class="go" aria-label="Entrar com Google">
+      <button type="submit">Cadastrar</button>
+
+      <div class="social" aria-label="Opções de cadastro">
+        <button type="button" class="go" aria-label="Cadastrar com Google">
           <i class="fab fa-google" aria-hidden="true"></i> Google
         </button>
-        <button type="button" class="fb" aria-label="Entrar com Facebook">
+        <button type="button" class="fb" aria-label="Cadastrar com Facebook">
           <i class="fab fa-facebook" aria-hidden="true"></i> Facebook
         </button>
         <a href="index.html" class="btn-voltar" aria-label="Voltar à página principal">
@@ -37,9 +47,8 @@
       </div>
 
       <div class="login-options">
-        <a href="#esqueci-senha" class="forgot-password">Esqueci minha senha</a>
-        <p class="register-link">
-          Não tem conta? <a href="cadastro.html">Cadastre-se</a>
+        <p class="login-link">
+          Já tem conta? <a href="login.html">Faça login</a>
         </p>
       </div>
     </form>
