@@ -1,0 +1,151 @@
+APPS PRINCIPAIS USADAS:
+APP.PY (Frontend do Cliente)
+Funções de Configuração:
+st.set_page_config() - Configura título e layout da página
+
+st.markdown() - Renderiza HTML/CSS customizado
+
+st.rerun() - Recarrega a aplicação para atualizar o estado
+
+Funções de Dados:
+carregar_pratos() - Carrega pratos do JSON ou cria padrão
+
+carregar_pedidos() - Carrega pedidos do arquivo JSON
+
+carregar_ingredientes() - Carrega lista de ingredientes
+
+carregar_favoritos() - Carrega pratos favoritos do usuário
+
+Funções de Tabela Nutricional:
+salvar_informacoes_nutricionais() - Salva dados nutricionais personalizados
+
+obter_informacoes_nutricionais() - Busca dados nutricionais (personalizados ou padrão)
+
+exibir_tabela_nutricional() - Exibe tabela nutricional formatada
+
+Funções de Pedidos:
+salvar_pedido_completo() - Salva pedido com todos os dados do checkout
+
+verificar_disponibilidade_prato() - Verifica se há ingredientes para o prato
+
+produto_disponivel() - Verifica disponibilidade de um prato específico
+
+Funções de Favoritos:
+toggle_favorito() - Adiciona/remove prato dos favoritos
+
+salvar_favoritos() - Salva lista de favoritos no JSON
+
+Funções de Estado/Carrinho:
+atualizar_item_carrinho() - Atualiza quantidade no carrinho
+
+limpar_carrinho() - Limpa carrinho e dados do checkout
+
+Componentes Streamlit:
+st.image() - Exibe imagens dos produtos
+
+st.button() - Cria botões interativos
+
+st.columns() - Cria layouts em colunas
+
+st.expander() - Cria seções expansíveis
+
+st.container() - Agrupa elementos
+
+st.dataframe() - Exibe tabelas de dados
+
+st.radio() - Botões de opção única
+
+st.text_input() - Campo de texto
+
+st.number_input() - Campo numérico
+
+st.success()/error()/info()/warning() - Mensagens de feedback
+
+st.balloons() - Efeito visual de confirmação
+
+ADMIN.PY (Painel Administrativo)
+Funções de Autenticação:
+Login/Logout - Controle de acesso administrativo
+
+Funções de CRUD Pratos:
+carregar_pratos() - Carrega pratos do JSON
+
+salvar_pratos() - Salva alterações nos pratos
+
+criar_novo_pedido() - Cria pedido simulado
+
+atualizar_status_pedido() - Atualiza status do pedido
+
+Funções de Ingredientes:
+carregar_ingredientes() - Carrega ingredientes do JSON
+
+criar_ingredientes_iniciais() - Cria lista padrão de ingredientes
+
+verificar_disponibilidade_prato() - Verifica disponibilidade
+
+Funções de Estoque:
+carregar_estoque() - Carrega dados de estoque
+
+calcular_custo_prato() - Calcula custo baseado em ingredientes
+
+Funções de Relatórios:
+Cálculo de margens - Análise de lucratividade
+
+Exportação de relatórios - Gera JSON com dados financeiros
+
+Funções de Upload/Imagens:
+st.file_uploader() - Upload de imagens dos produtos
+
+os.makedirs() - Cria diretórios para armazenar imagens
+
+Funções de Navegação:
+st.switch_page() - Navega entre páginas
+
+st.tabs() - Cria abas no painel
+
+RESUMO POR CATEGORIA:
+Manipulação de Arquivos:
+JSON: json.load(), json.dump()
+
+Arquivos: open(), os.path.exists(), os.makedirs()
+
+Streamlit UI Components:
+Layout: columns, container, expander
+
+Inputs: button, text_input, number_input, selectbox, radio, checkbox
+
+Display: image, markdown, dataframe, table
+
+Feedback: success, error, info, warning
+
+Gerenciamento de Estado:
+st.session_state - Armazena dados da sessão
+
+st.rerun() - Atualiza interface
+
+Processamento de Dados:
+List comprehensions e dicionários
+
+Busca com next() e loops
+
+Cálculos matemáticos e porcentagens
+
+Manipulação de Datas:
+datetime.now() - Data/hora atual
+
+.strftime() - Formatação de datas
+
+FLUXO PRINCIPAL:
+APP.PY:
+Carrega dados → Exibe produtos → Usuário seleciona → Adiciona ao carrinho → Checkout → Salva pedido
+
+ADMIN.PY:
+Autenticação → Gerenciamento (pratos/ingredientes/pedidos) → Análise → Exportação
+
+Ambos os códigos usam arquivos JSON como banco de dados simples e Streamlit para interface web, com foco em:
+
+Frontend: Experiência do usuário, carrinho, pedidos
+
+Backend/Admin: CRUD completo, estoque, relatórios financeiros
+
+Total aproximado: 44 funções principais + funções auxiliares e métodos built-in do Python.
